@@ -13,7 +13,7 @@ branches:
 cache:
   directories:
     - '$HOME/.m2/repository'
-    - '$HOME/.gradlew'
+    - '$HOME/.gradle'
 
 # master브랜치에 푸시되었을때 수항해는 명령어입니다
 # 여기서는 프로젝트 내부에 둔 gradlew을 통해 clean & build를 수행합니다
