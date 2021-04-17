@@ -9,8 +9,7 @@ public class ProfileControllerUnitTest {
 
     @Test
     public void real_profile이_조회된다() {
-
-        //given
+        // given
         String expectedProfile = "real";
         MockEnvironment env = new MockEnvironment();
         env.addActiveProfile(expectedProfile);
@@ -19,16 +18,15 @@ public class ProfileControllerUnitTest {
 
         ProfileController controller = new ProfileController(env);
 
-        //when
+        // when
         String profile = controller.profile();
 
-        //then
+        // then
         assertThat(profile).isEqualTo(expectedProfile);
     }
 
     @Test
-    public void real_profiile이_없으면_첫_번째가_조회된다() {
-
+    public void real_profile이_없으면_첫_번째가_조회된다() {
         //given
         String expectedProfile = "oauth";
         MockEnvironment env = new MockEnvironment();
@@ -47,7 +45,6 @@ public class ProfileControllerUnitTest {
 
     @Test
     public void active_profile이_없으면_default가_조회된다() {
-
         //given
         String expectedProfile = "default";
         MockEnvironment env = new MockEnvironment();
